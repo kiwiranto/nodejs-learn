@@ -1,0 +1,25 @@
+GET  http://localhost:8000/users
+###
+
+GET  http://localhost:8000/users/6667140b93abe542dfd3506b
+###
+
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+  "name": "rora",
+  "age": 25
+}
+
+###
+PATCH  http://localhost:8000/users/66671195b8857a768567034c
+Content-Type: application/json
+
+{
+  "name": "Nerio Arusha Muhammad",
+  "age": 3
+}
+
+###
+DELETE  http://localhost:8000/users/666711d27d88a9e2fdf535cd
