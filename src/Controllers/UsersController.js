@@ -1,5 +1,5 @@
 import { formatResponse } from '../Helpers/HelperGlobal.js';
-import Users from '../Models/UsersModel.js';
+import Users from '#Models/UsersModel.js';
 
 export const getUsers = async (req, res) => {
   try {
@@ -17,7 +17,8 @@ export const getUsers = async (req, res) => {
       formatResponse({
         status: false,
         code: 500,
-        errorMessage: error?.message
+        errorMessage: error?.message,
+        data: null
       })
     )
   }
@@ -46,7 +47,8 @@ export const getUserById = async (req, res) => {
       formatResponse({
         status: false,
         code: 400,
-        errorMessage: error?.message
+        errorMessage: error?.message,
+        data: null
       })
     )
   }
@@ -69,7 +71,7 @@ export const saveUser = async (req, res) => {
 
     res.status(201).send(
       formatResponse({
-        status: "USRA201",
+        code: "USRA201",
         data: result
       })
     )
@@ -114,7 +116,7 @@ export const updateUser = async (req, res) => {
 
     res.status(200).send(
       formatResponse({
-        status: "USRU200",
+        code: "USRU200",
         data: result
       })
     )
@@ -147,7 +149,7 @@ export const deleteUser = async (req, res) => {
 
     res.status(200).send(
       formatResponse({
-        status: "USRD200",
+        code: "USRD200",
         data: result
       })
     )

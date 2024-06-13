@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES2020",
+    "moduleResolution": "Node",
+    "baseUrl": "./",
+    "paths": {
+      "#Controllers/*": ["./src/Controllers/*"],
+      "#Routes/*": ["./src/Routes/*"],
+      "#Models/*": ["./src/Models/*"],
+      "#Helpers/*": ["./src/Helpers/*"],
+    }
+  },
+  "include": [
+    "./src/**/*",
+  ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ]
+}

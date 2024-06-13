@@ -3,7 +3,8 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-import UserRoute from './Routes/UsersRoute.js'
+import UsersRoute from '#Routes/UsersRoute.js'
+import UserAccountRoute from '#Routes/UserAccountRoute.js'
 
 const app = express();
 dotenv.config();
@@ -24,7 +25,8 @@ mongoose.connect(MONGOURL, {
 
 app.use(cors())
 app.use(express.json())
-app.use(UserRoute)
+app.use(UsersRoute)
+app.use(UserAccountRoute)
 app.listen(PORT, () => {
   console.log(`its running in PORT ${PORT}`);
 })
